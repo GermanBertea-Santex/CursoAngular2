@@ -1,6 +1,10 @@
-<div class="row">
-  <button class="btn btn-primary" [disabled]='!allowNewService'>Add Server</button>
+<div style="padding-left: 50px;">
+  <div class="row" >
+    <button class="btn btn-primary" [disabled]='!allowNewService' (click)="onCreateServer()" >Add Server</button>
+    <p [innerText]="allowNewService"></p>
   </div>
- <div class="row" >
-   <app-server></app-server>
- </div> 
+  <p>{{serverCreationStatus}}</p>
+  <div class="row">
+    <app-server></app-server>
+  </div>
+</div>
