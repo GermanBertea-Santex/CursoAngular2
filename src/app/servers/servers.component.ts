@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   constructor() { }
+  allowNewService = false;
 
   ngOnInit() {
+    setTimeout(() => {
+      this.allowNewService =true;
+    }, 2000);
   }
+
 
 }
