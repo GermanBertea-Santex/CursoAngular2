@@ -1,8 +1,10 @@
 <div style="padding-left: 50px;">
+  <label>Server name:</label><input type="text" class="form-control" [(ngModel)]="serverName" >
+ 
   <div class="row" >
     <button class="btn btn-primary" [disabled]='!allowNewService' (click)="onCreateServer()" >Add Server</button>
-    <p [innerText]="allowNewService"></p>
   </div>
+
   <p>{{serverCreationStatus}}</p>
   <div class="row">
     <app-server></app-server>
